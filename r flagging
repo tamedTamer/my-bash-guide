@@ -1,0 +1,30 @@
+# Linux `-r` Flag Guide
+
+The `-r` (or sometimes `-R`) flag is used in many Linux commands, but its meaning changes depending on the command. Here’s a detailed overview:
+
+| Command       | Meaning of `-r` / `-R`             | Example                                      | Explanation                                                  |
+|---------------|------------------------------------|----------------------------------------------|--------------------------------------------------------------|
+| `cp -r`       | Recursive copy                     | `cp -r dir1/ dir2/`                          | Copies directories and their contents                        |
+| `rm -r`       | Recursive delete                   | `rm -r dir/`                                 | Deletes directories and their contents                       |
+| `chmod -R`    | Recursive permission change        | `chmod -R 755 dir/`                          | Changes permissions of a directory and all its contents      |
+| `chown -R`    | Recursive ownership change         | `chown -R user:group dir/`                   | Changes ownership for all files in a directory               |
+| `ls -R`       | Recursive listing                  | `ls -R`                                      | Lists files in all subdirectories                            |
+| `rsync -r`    | Recursive sync                     | `rsync -r src/ dest/`                        | Copies files and subdirectories                              |
+| `grep -r`     | Recursive search                   | `grep -r "pattern" dir/`                     | Searches for text in files within subdirectories             |
+| `diff -r`     | Recursive directory comparison     | `diff -r dir1/ dir2/`                        | Compares directory contents recursively                      |
+| `wget -r`     | Recursive website download         | `wget -r http://example.com`                 | Downloads a full website including subdirectories            |
+| `read -r`     | Raw input (don’t interpret `\`)    | `read -r line`                               | Prevents backslashes from being interpreted as escape chars  |
+| `scp -r`      | Recursive remote copy              | `scp -r dir/ user@host:/path/`               | Copies a directory to/from a remote server                   |
+| `mkdir -p`    | (⚠️ Not `-r`) Create parent dirs   | `mkdir -p /a/b/c`                            | Creates parent directories as needed                         |
+| `find`        | (No `-r`, recursive by default)    | `find . -name "*.txt"`                       | Recurses by default; no need for `-r`                        |
+| `tar`         | (No `-r`, handles rec. by design)  | `tar -cvf archive.tar dir/`                  | Archives directories recursively by default                  |
+
+---
+
+### Notes:
+
+- `-r` or `-R` often stands for:  
+  - **recursive** (process directories and their contents)  
+  - **raw** (in some cases like `read`, prevents interpretation)  
+
+Use `man <command>` to learn more about each flag in detail.
