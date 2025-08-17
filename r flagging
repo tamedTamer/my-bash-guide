@@ -15,7 +15,6 @@ The `-r` (or sometimes `-R`) flag is used in many Linux commands, but its meanin
 | `wget -r`     | Recursive website download         | `wget -r http://example.com`                 | Downloads a full website including subdirectories            |
 | `read -r`     | Raw input (don’t interpret `\`)    | `read -r line`                               | Prevents backslashes from being interpreted as escape chars  |
 | `scp -r`      | Recursive remote copy              | `scp -r dir/ user@host:/path/`               | Copies a directory to/from a remote server                   |
-| `mkdir -p`    | (⚠️ Not `-r`) Create parent dirs   | `mkdir -p /a/b/c`                            | Creates parent directories as needed                         |
 | `find`        | (No `-r`, recursive by default)    | `find . -name "*.txt"`                       | Recurses by default; no need for `-r`                        |
 | `tar`         | (No `-r`, handles rec. by design)  | `tar -cvf archive.tar dir/`                  | Archives directories recursively by default                  |
 
